@@ -1,0 +1,172 @@
+%-----------------------------------------------------
+% Load packages for main document
+%-----------------------------------------------------
+\documentclass[12pt, a4paper,twoside,bibliography=totoc]{report} 	
+\usepackage[ngerman]{babel} 	% Language English
+\usepackage{lmodern}		 	% Latin Modern Fonts
+\usepackage[T1]{fontenc}		% Schriften unterschiedlicher Kodierung
+\usepackage[utf8]{inputenc}		% Eingabekodierung UTF8
+\usepackage{listings}			% Listings Package
+\usepackage{textcomp}			% Necessary for utf8 listings
+\usepackage{paralist}			% Allows the usage of individual item-symbols
+\usepackage{parskip} 			% Manages the space between sections, chapters, paragraphes
+\usepackage{fancyhdr}			% Manages headers and footers
+\usepackage{graphicx}			% Manages the import of pictures 
+\usepackage{float}				% Allows the positioning of figures and tables on a fixed position
+\usepackage{tabularx}			% Allows generation of long and wide tables
+\usepackage{esdiff}				% Upright symbol when differentiating
+\usepackage{amsmath}			% Allows the inclusion of formulas 
+\usepackage{amssymb}			% Extends the variety of mathematical symbols
+\usepackage{dsfont}				% Options for Mathematic Environment
+\usepackage{hhline}				% Extends the possible lines in tables
+\usepackage{longtable}			% Extends tabulars to be set on more than one page
+\usepackage{tikz,pgfplots}				% Allows drawing vector graphics 
+\usepackage{titlesec}			% Allows changing additional spaces between text and title
+\usepackage{siunitx}			% Allows the usage of SI-symbols
+\usepackage{pdfpages}			% Allows embedding pdf-pages 
+\usepackage{epstopdf}			% Allows the usage of eps-figures 
+\usepackage{titletoc} 			% Allows individual changes of the title page
+\usepackage{lastpage}			% Allows writing X/Y where Y is document's last page
+\usepackage{placeins}			% Allows separating of float environments
+\usepackage{multirow}			% Allows combining several rows in tables
+\usepackage{multicol}			% Allows combining several columns in tables
+\usepackage{cite}				% Manages references and allows the embedding of BibTex
+\usepackage[intoc]{nomencl}	    % Manages the nomenclature
+\usepackage{lipsum}				% Allows the usage of lipsum-text
+\usepackage{geometry}			% Allow the individual 
+\usepackage{psfrag}
+\usepackage{nicefrac}
+\usepackage{caption}
+\usepackage{graphicx,subcaption}
+%\usepackage[demo]{graphicx}
+\usepackage{colortbl}
+\usepackage{listings}
+\usepackage{hyperref}		%allows autoref
+
+
+
+%-----------------------------------------------------
+% Header and Footer
+%-----------------------------------------------------
+\fancyhf{} 			% clear all fields
+
+\fancypagestyle{emptyPage}{%
+	\fancyhead{}
+	\fancyfoot{}
+	\renewcommand{\footrulewidth}{0.0pt}
+	\renewcommand{\headrulewidth}{0.0pt}
+	\fancyheadoffset{0cm}
+}%
+\fancypagestyle{prolog}{%
+	\fancyhead{}
+	\fancyfoot{}
+	\fancyfoot[C]{\textbf{\thepage}}
+	\renewcommand{\footrulewidth}{0.8pt}
+	\renewcommand{\headrulewidth}{0.0pt}
+	\fancyheadoffset{0cm}
+}%
+\fancypagestyle{mainDocument}{%
+	\fancyhead{}
+	\fancyhead[RO]{\rightmark}
+	\fancyhead[LE]{\leftmark}
+	\fancyfoot{}
+	\fancyfoot[RO,LE]{\textbf{\thepage}}
+	\renewcommand{\footrulewidth}{0.8pt}
+	\renewcommand{\headrulewidth}{0.8pt}
+	\fancyheadoffset{0cm}
+}%
+
+
+
+%-----------------------------------------------------
+% Configure nomenclature
+%-----------------------------------------------------
+\makenomenclature
+
+%-----------------------------------------------------
+% Configure Table of contents and Bibliography
+%-----------------------------------------------------
+\addto{\captionsenglish}{\renewcommand{\contentsname}{Table of contents}}
+\addto{\captionsenglish}{\renewcommand{\bibname}{References}}
+
+\begin{document}
+	 
+	%-----------------------------------------------------
+	% Include cover sheet
+	%-----------------------------------------------------	
+	\include{01_Coversheet/coversheet}
+	%-----------------------------------------------------
+	% Change pagestyle and page layout
+	%-----------------------------------------------------
+	\newgeometry{includeheadfoot, bindingoffset = 25mm, 
+		left = 5mm, 
+		right = 20mm,
+		headheight = 15mm,
+		headsep = 8mm,
+		textheight = 230mm,
+		footskip = 16mm}
+	%-----------------------------------------------------
+	% Reset page counter and its style
+	%-----------------------------------------------------	
+	\pagestyle{fancy}	
+	\setcounter{tocdepth}{2}
+	\pagenumbering{Roman}
+	\setcounter{page}{1}
+	%-----------------------------------------------------
+	% Preamble
+	%-----------------------------------------------------
+	%\input{03_Preamble/preamble}
+	
+	%-----------------------------------------------------
+	% Zusammenfassung
+	%-----------------------------------------------------
+	\include{04_AbstractDE/abstractDE}
+	%-----------------------------------------------------
+	% Abstract
+	%-----------------------------------------------------
+	%\include{05_AbstractEN/abstractEN}
+	%-----------------------------------------------------
+	% Table of contents
+	%-----------------------------------------------------
+	\tableofcontents
+	\thispagestyle{prolog}
+	\pagestyle{prolog}
+	%-----------------------------------------------------
+	\newpage 
+	\setcounter{page}{1}
+	\pagenumbering{arabic}
+	\thispagestyle{mainDocument}
+	\pagestyle{mainDocument}
+	%-----------------------------------------------------
+	% Chapter 1
+	%-----------------------------------------------------
+	%\include{06_Chapter1/chapter1}
+	%-----------------------------------------------------
+	% Chapter 2
+	%-----------------------------------------------------
+	\include{07_Chapter2/chapter2}
+	%-----------------------------------------------------
+	% Chapter 3
+	%-----------------------------------------------------
+	%\include{08_Chapter3/chapter3}
+	%-----------------------------------------------------
+	% Chapter 4
+	%-----------------------------------------------------
+	%\include{09_Chapter4/chapter4}
+	%%% Nomenclature
+	%-----------------------------------------------------
+	%\nomenclature{$\mu_0$}{permeability in vacuum}
+	%-----------------------------------------------------
+	%%%\printnomenclature
+	\thispagestyle{mainDocument}
+	\clearpage
+	%-----------------------------------------------------
+	% References
+	%-----------------------------------------------------
+	%\nocite{Zagar}
+	%-----------------------------------------------------
+
+
+	\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+	\clearpage
+\end{document}
