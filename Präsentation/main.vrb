@@ -1,0 +1,27 @@
+\frametitle{Non-line-of-sight (NLOS)}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+		\begin{block}{Error sources by significance}
+
+\begin{enumerate}
+\item Multipath
+\item Signal level dependent receive delay as described in \autocite{DW1000APS11}
+\item Noise
+\item Transmission and receive delays
+\item Clock drift between anchor and tag
+\end{enumerate}
+\end{block}
+\end{column}
+\begin{column}{0.5\textwidth}  %%<--- here
+    \begin{center}
+     \begin{figure}
+		\graphicspath{{fig/}}
+		\def\svgwidth{\textwidth}
+		\input{fig/NLOS_Problem.pdf_tex}
+		\caption{Typical NLOS scenario}
+		\label{fig:measurementSetup}
+\end{figure}
+     \end{center}
+
+\end{column}
+\end{columns}

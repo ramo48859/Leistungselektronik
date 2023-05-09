@@ -1,0 +1,117 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{DW1000APS11}{manual}{}
+      \list{organization}{1}{%
+        {DecaWave Ltd.}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{note}{APS 11 Application Note, version 1.1}
+      \field{title}{Sources of error in {DW}1000 based two-way raning ({TWR}) schemes}
+      \field{year}{2014}
+    \endentry
+    \entry{ruiz2017comparing}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ef7ee0e7ac93bbad439138fc726dbc57}{%
+           family={Ruiz},
+           familyi={R\bibinitperiod},
+           given={Antonio\bibnamedelimb Ramón\bibnamedelima Jiménez},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=79b052f766b415dba07f6d726fbbc9bf}{%
+           family={Granja},
+           familyi={G\bibinitperiod},
+           given={Fernando\bibnamedelima Seco},
+           giveni={F\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{8b4a2db700f5065cc39f66174ef68e77}
+      \strng{fullhash}{8b4a2db700f5065cc39f66174ef68e77}
+      \strng{bibnamehash}{8b4a2db700f5065cc39f66174ef68e77}
+      \strng{authorbibnamehash}{8b4a2db700f5065cc39f66174ef68e77}
+      \strng{authornamehash}{8b4a2db700f5065cc39f66174ef68e77}
+      \strng{authorfullhash}{8b4a2db700f5065cc39f66174ef68e77}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on instrumentation and Measurement}
+      \field{number}{8}
+      \field{title}{Comparing ubisense, bespoon, and decawave uwb location systems: Indoor performance analysis}
+      \field{volume}{66}
+      \field{year}{2017}
+      \field{pages}{2106\bibrangedash 2117}
+      \range{pages}{12}
+    \endentry
+    \entry{AoAQorvo}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=28cf9e00dee119d90edede0a73bd8d42}{%
+           family={Dotlic},
+           familyi={D\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod}}}%
+        {{hash=650a9b603bb32586240b7c02fa843a23}{%
+           family={Connell},
+           familyi={C\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bd18c879f9e29c587d042f725f23e5cb}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Hang},
+           giveni={H\bibinitperiod}}}%
+        {{hash=05918f106fab471eca16f072f2a5afe3}{%
+           family={Clancy},
+           familyi={C\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod}}}%
+        {{hash=25f2eb95f8d6131bf2352160dbc2b3fb}{%
+           family={McLaughlin},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{800d1c64697c2a1da6b35416c7ef5375}
+      \strng{fullhash}{0ad4a6eb023cb317483b00eb246af122}
+      \strng{bibnamehash}{0ad4a6eb023cb317483b00eb246af122}
+      \strng{authorbibnamehash}{0ad4a6eb023cb317483b00eb246af122}
+      \strng{authornamehash}{800d1c64697c2a1da6b35416c7ef5375}
+      \strng{authorfullhash}{0ad4a6eb023cb317483b00eb246af122}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 14th Workshop on Positioning, Navigation and Communications (WPNC)}
+      \field{title}{Angle of arrival estimation using decawave DW1000 integrated circuits}
+      \field{year}{2017}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/WPNC.2017.8250079
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
