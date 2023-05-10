@@ -81,14 +81,14 @@ plt.show()
 
 noDiode = pd.read_csv("NoDiodeResistor.txt",sep='\t')
 #limit time 
-noDiode = noDiode[noDiode["time"]>3.5052e-3]
-noDiode = noDiode[noDiode["time"]<3.5088e-3]
+noDiode = noDiode[noDiode["time"]>3.5048e-3]
+noDiode = noDiode[noDiode["time"]<3.5064e-3]
 
 #set base unit
 time_unit = "us"
 time_fact = 10**6
 #remove offset
-time_offset = 3.50
+time_offset = 3504.8
 
 
 
@@ -96,7 +96,7 @@ fig, ax1 = plt.subplots()
 
 ax2 = ax1.twinx()
 plt1 = ax2.plot(noDiode["time"]*time_fact-time_offset, noDiode["Id(M4)"], label = "Id(M4)",color = 'C4')
-plt2 = ax1.plot(noDiode["time"]*time_fact-time_offset, noDiode["V(N004,Load)"],label = "Vgs(M3)")
+plt2 = ax1.plot(noDiode["time"]*time_fact-time_offset, noDiode["V(N005,Load)"],label = "Vgs(M3)")
 plt3 = ax1.plot(noDiode["time"]*time_fact-time_offset, noDiode["V(load)"],label = "V(Load)")
 ax2.grid(False)
 
